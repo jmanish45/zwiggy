@@ -19,3 +19,27 @@ a{
   width: 80%;
   margin: auto;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity : 0;
+    transparency: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transparency: 1;
+  }
+
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
