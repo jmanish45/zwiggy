@@ -5,9 +5,16 @@
     align-items: center;
 }
 
+.navbar .zwiggy-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
+}
+
 .navbar .logo {
     width: 150px;
-} 
+    
+}
 
 .navbar-menu {
     display: flex;
@@ -78,3 +85,4 @@
     width: 24px;
     cursor: pointer;
 }
+

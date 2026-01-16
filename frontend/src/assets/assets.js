@@ -1,5 +1,6 @@
 import basket_icon from './basket_icon.png'
 import logo from './logo.png'
+import zwiggylogo from './zwiggylogo.png'
 import header_img from './header_img.png'
 import search_icon from './search_icon.png'
 import menu_1 from './menu_1.png'
@@ -62,6 +63,7 @@ import parcel_icon from './parcel_icon.png'
 
 export const assets = {
     logo,
+    zwiggylogo,
     basket_icon,
     header_img,
     search_icon,
@@ -82,6 +84,7 @@ export const assets = {
     parcel_icon
 }
 
+// for Explore Menu
 export const menu_list = [
     {
         menu_name: "Salad",
@@ -116,6 +119,7 @@ export const menu_list = [
         menu_image: menu_8
     }]
 
+//for  Food display in HOme page using FoodDisplay component
 export const food_list = [
     {
         _id: "1",

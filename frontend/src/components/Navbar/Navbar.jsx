@@ -7,7 +7,10 @@ const Navbar = () => {
     const [menu , setMenu] = useState("Home")  //state to manage active menu item
   return (
     <div className='navbar'>
-        <img src={assets.logo}  alt="" className='logo' />
+        <div className="nav-logo">
+            <img src={assets.zwiggylogo} alt="" className='zwiggy-logo' />
+            <img src={assets.logo}  alt="" className='logo' />
+        </div>
         <ul className="navbar-menu">
             <li onClick={() => setMenu("Home")} className={menu=="Home"?"active":""}>Home</li>
             <li onClick={() => setMenu("Menu")} className={menu=="Menu"?"active":""}>Menu</li>
