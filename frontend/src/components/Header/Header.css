@@ -14,7 +14,7 @@
     align-items: start;
     gap: 1.5vw;
     max-width: 50%;
-    bottom: 10%;
+    bottom: 5%;
     left: 6vw;
     animation: fadeIn 1s ease-in-out ;
     animation: slideInFromLeft 1s ease-in-out ;
@@ -25,6 +25,7 @@
     font-weight: 500;
     color: white;
     font-size: max(4vw, 16px);
+    
 }
 
 .header-contents p  {

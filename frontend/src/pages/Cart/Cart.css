@@ -1,0 +1,56 @@
+.cart-summary {
+    margin-top: 80px;
+}
+
+.cart-summary hr {
+    margin: 10px 0;
+}
+
+.cart-total button {
+    padding: 12px 0px;
+    border-radius: 4px;
+    width: max(15vw, 200px);
+    margin-top: 20px;
+}
+
+.cart-promo-code button {
+    width: max(10vw , 150px);
+    padding: 10px 2px;
+    background-color: black;
+    border:none;
+    color: white;
+    border-radius: 4px;
+
+}
+.cart-promo-code input {
+    padding: 10px 2px;
+    width: max(15vw , 200px);
+    padding-left: 10px;
+
+}
+
+@media (max-width: 750px) {
+    .cart-summary {
+        margin-top: 40px;
+        flex-direction : column-reverse;
+    }
+
+    .cart-total button {
+        width: 100%;
+
+    }
+
+    .cart-promo-code {
+        margin-top: 30px;
+        justify-content: start  ;
+    }
+
+    .cart-promo-code input, .cart-promo-code button {
+        width: 100%;
+    }
+
+    .promocode-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
