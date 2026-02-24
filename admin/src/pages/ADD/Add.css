@@ -1,0 +1,236 @@
+/* Main Container - Fits in viewport */
+.add {
+    height: calc(100vh - 80px);
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow-y: auto;
+}
+
+/* Page Title */
+.add-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+/* Form Layout */
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+}
+
+/* Top Section: Image Left, Details Right */
+.add-top-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Upload - Left Side */
+.add-image-upload {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.add-image-upload p {
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 14px;
+}
+
+.add-image-upload label {
+    width: 180px;
+    height: 180px;
+    border: 2px dashed #c5c5c5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.add-image-upload label:hover {
+    border-color: #4361ee;
+    background: #eef2ff;
+}
+
+.add-image-upload img {
+    width: 80px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.add-image-upload label:hover img {
+    opacity: 1;
+}
+
+/* Details Section - Right Side */
+.add-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+.add-prod-name p,
+.add-prod-desc p,
+.add-category p,
+.add-price p {
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Product Name Input */
+.add-prod-name input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.add-prod-name input:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+/* Description Textarea */
+.add-prod-desc textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+    font-family: inherit;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.add-prod-desc textarea:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+/* Bottom Section: Category, Price & Button */
+.add-bottom-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.add-category,
+.add-price {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Select Dropdown */
+.add-category select {
+    padding: 14px 40px 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a2e' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 14px center;
+    appearance: none;
+    min-width: 160px;
+    transition: all 0.3s ease;
+}
+
+.add-category select:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+/* Price Input */
+.add-price input {
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+.add-price input:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+/* Submit Button */
+.add-btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .add {
+        padding: 20px;
+    }
+
+    .add-top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-image-upload label {
+        width: 150px;
+        height: 150px;
+    }
+
+    .add-bottom-section {
+        flex-wrap: wrap;
+    }
+
+    .add-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
