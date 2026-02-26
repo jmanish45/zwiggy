@@ -4,8 +4,8 @@ import { assets } from '../../assets/assets'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 // This component is for adding a new product to the menu. It includes a form with fields for the product name, description, price, category, and an image upload. The form data is managed using the useState hook, and the onSubmitHandler function is responsible for handling the form submission and preparing the data to be sent to the backend API. The useEffect hook can be used to perform any side effects or data fetching if needed when the component mounts or when the data state changes.
-const Add = () => {
-  const url = "http://localhost:5000"
+const Add = ({url}) => {
+   
   const [image, setImage] = useState(false); // State to hold the uploaded image file , false means no image uploaded yet
   const [data, setData] = useState({  // State to hold the form data for the new product  
     name: '',     

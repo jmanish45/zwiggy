@@ -4,8 +4,8 @@ import './List.css'
 import { toast } from 'react-toastify'
 
 
-const List = () => {
-  const url = "http://localhost:5000" 
+const List = ({url}) => {
+  
   const [list, setList] = useState([]);
   
   const fetchlist = async () => {
