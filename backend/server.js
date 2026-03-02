@@ -1,8 +1,10 @@
 // const express = require('express');
 import express from 'express';
 import cors from 'cors';
+import 'dotenv/config';
 import { connectdb } from './config/db.js';
 import foodRouter from './routes/foodroutes.js';
+import userRouter from './routes/userRoutes.js';
 
 //app config
 const app = express();
@@ -16,6 +18,7 @@ app.use(cors()) ;
 //entry point route apis 
 app.use('/api/food', foodRouter);
 app.use('/images', express.static('uploads'));  //it will serve the images from the uploads folder when requested with /images route, for example if we have an image named "food.jpg" in uploads folder, we can access it via http://localhost:5000/images/food.jpg
+app.use('/api/user', userRouter);
 
 app.get('/' , (req, res) => {
     res.send('Zwiggy Backend Server is Running');  
