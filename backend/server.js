@@ -5,23 +5,27 @@ import 'dotenv/config';
 import { connectdb } from './config/db.js';
 import foodRouter from './routes/foodroutes.js';
 import userRouter from './routes/userRoutes.js';
-
+import cartRouter from './routes/cartRoutes.js'; //this will be added when we will implement the cart functionality in future
 //app config
+import orderRoutes from './routes/orderRoutes.js';
 const app = express();
 const PORT = 5000;
 
 //middlewares
 app.use(express.json());
-app.use(cors()) ;
+app.use(cors());
 
 
 //entry point route apis 
 app.use('/api/food', foodRouter);
 app.use('/images', express.static('uploads'));  //it will serve the images from the uploads folder when requested with /images route, for example if we have an image named "food.jpg" in uploads folder, we can access it via http://localhost:5000/images/food.jpg
 app.use('/api/user', userRouter);
+app.use('/api/cart', cartRouter); //this will be added when we will implement the cart functionality in future
+app.use('/api/order', orderRoutes);
 
-app.get('/' , (req, res) => {
-    res.send('Zwiggy Backend Server is Running');  
+
+app.get('/', (req, res) => {
+    res.send('Zwiggy Backend Server is Running');
 })
 
 //db config
